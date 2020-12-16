@@ -1,11 +1,11 @@
-import React, { Children } from 'react';
+import React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import { Background, Container, ButtonLink ,Logo} from './styles/header';
 
 
 
 export default function Header({ bg = true, children, ...restProps }) {
-return bg ? <Background {...restProps}>{children}</Background> : Children;
+return bg ? <Background {...restProps}>{children}</Background> : children;
 };
 
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
