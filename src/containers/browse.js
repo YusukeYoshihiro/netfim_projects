@@ -1,11 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react';
+import Fuse from 'fuse.js'
 import { SelectProfileContainer } from './profiles';
+import { FooterContainer } from './footer';
 import { FirebaseContext } from '../context/firebase';
-import { Card, Loading, Header } from '../components';
+import { Card, Loading, Header, Player } from '../components';
 import * as ROUTES from '../constants/routes';
 import logo from '../Logo_netfilm.png';
-
 
 export function BrowseContainer({ slides }) {
   const [category, setCategory] = useState('series')
@@ -28,6 +29,18 @@ export function BrowseContainer({ slides }) {
     setSlideRows(slides[category]);
   }, [slides, category])
 
+  useEffect(() => {
+     const fuse = new Fuse(slideRows, { keys:['data.description', 'data.title', 'data.genre'],
+     });
+     const results = fuse.search(searchTerm).map(({ item }) => item);
+
+     if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
+       setSlideRows(results);
+     } else {
+       setSlideRows(slides[category]);
+     }
+  }, [searchTerm])
+
   return profile.displayName ? (
     <>
       {loading ? (
@@ -36,7 +49,7 @@ export function BrowseContainer({ slides }) {
           <Loading.ReleaseBody />
         )}
 
-      <Header src="joker1" dontShowOnSmallViewPort>
+      <Header src="joker-steps" dontShowOnSmallViewPort>
         <Header.Frame>
           <Header.Group>
             <Header.Logo to={ROUTES.HOME} src={logo} alt="NetFilm" />
@@ -85,19 +98,30 @@ export function BrowseContainer({ slides }) {
       </Header>
 
       <Card.Group>
-          {slideRows.map((slideItem)=> (
-            <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
-              <Card.Title>{slideItem.title}</Card.Title>
-              <Card.Entities>
+        {slideRows.map((slideItem) => (
+          <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
+            <Card.Title>{slideItem.title}</Card.Title>
+            <Card.Entities>
               {slideItem.data.map((item) => (
                 <Card.Item key={item.docId} item={item}>
                   <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
+                  <Card.Meta>
+                    <Card.SubTitle>{item.title}</Card.SubTitle>
+                    <Card.Text>{item.description}</Card.Text>
+                  </Card.Meta>
                 </Card.Item>
-                ))}
-              </Card.Entities>
-            </Card>
-          ))}
+              ))}
+            </Card.Entities>
+          <Card.Feature category={category}>
+            <Player>
+              <Player.Button />
+              <Player.Video src="/videos/count_1080p.mp4" />
+            </Player>
+          </Card.Feature>
+          </Card>
+        ))}
       </Card.Group>
+      <FooterContainer />
     </>
   ) : (
       <SelectProfileContainer user={user} setProfile={setProfile} />
