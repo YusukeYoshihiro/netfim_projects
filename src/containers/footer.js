@@ -12,7 +12,7 @@ export function FooterContainer() {
           <Footer.Link href="#"> Investor Relations</Footer.Link>
           <Footer.Link href="#"> Way to Watch</Footer.Link>
           <Footer.Link href="#"> Corporate Information</Footer.Link>
-          <Footer.Link href="#"> NetFilm Originals</Footer.Link>
+          <Footer.Link href="#"> Y'sFILM Originals</Footer.Link>
         </Footer.Column>
 
         <Footer.Column>
@@ -37,7 +37,7 @@ export function FooterContainer() {
         </Footer.Column>
       </Footer.Row>
       <Footer.Break />
-      <Footer.Text>NetFilm Yusuke Yoshihiro</Footer.Text>
+      <Footer.Text>Y'sFILM Yusuke Yoshihiro &copy;2020 All Rights Reserved</Footer.Text>
     </Footer>
   )
 }

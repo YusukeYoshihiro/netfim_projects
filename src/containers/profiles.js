@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header, Profiles } from '../components';
 import * as ROUTES from '../constants/routes';
-import logo from '../Logo_netfilm.png';
+import logo from '../Y\'sFILM.png';
 
 export function SelectProfileContainer({ user, setProfile }) {
   console.log('user', user);
