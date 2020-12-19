@@ -6,7 +6,8 @@ import { FooterContainer } from './footer';
 import { FirebaseContext } from '../context/firebase';
 import { Card, Loading, Header, Player } from '../components';
 import * as ROUTES from '../constants/routes';
-import logo from '../Y\'sFILM.png';
+import Logo from '../Y\'sFILM.png';
+
 
 export function BrowseContainer({ slides }) {
   const [category, setCategory] = useState('series')
@@ -52,7 +53,7 @@ export function BrowseContainer({ slides }) {
       <Header src={`${process.env.PUBLIC_URL}/joker-steps`} dontShowOnSmallViewPort>
         <Header.Frame>
           <Header.Group>
-            <Header.Logo to={ROUTES.HOME} src={`${process.env.PUBLIC_URL}/${logo}`} alt="NetFilm" />
+            <Header.Logo to={ROUTES.HOME} src={`${process.env.PUBLIC_URL}/${Logo}`} alt="NetFilm" />
             <Header.TextLink
               active={category === 'series' ? 'true' : 'false'}
               onClick={() => setCategory('series')}
