@@ -1,7 +1,8 @@
 import React from 'react';
 import { Header, Profiles } from '../components';
+// import { Logo } from '../components/header/styles/header';
 import * as ROUTES from '../constants/routes';
-import logo from '../Y\'sFILM.png';
+import Logo from '../Y\'sFILM.png';
 
 export function SelectProfileContainer({ user, setProfile }) {
   console.log('user', user);
@@ -9,7 +10,7 @@ export function SelectProfileContainer({ user, setProfile }) {
     <>
       <Header bg={false}>
         <Header.Frame>
-          <Header.Logo to={ROUTES.HOME} src={logo} alt="NetFilm" />
+          <Header.Logo to={ROUTES.HOME} src={`${process.env.PUBLIC_URL}/${Logo}`} alt="NetFilm" />
         </Header.Frame>
       </Header>
 
