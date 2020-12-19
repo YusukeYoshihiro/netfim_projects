@@ -44,15 +44,15 @@ export function BrowseContainer({ slides }) {
   return profile.displayName ? (
     <>
       {loading ? (
-        <Loading src={user.photoURL} />)
+        <Loading src={`${process.env.PUBLIC_URL}/${user.photoURL}`} />)
         : (
           <Loading.ReleaseBody />
         )}
 
-      <Header src="joker-steps" dontShowOnSmallViewPort>
+      <Header src={`${process.env.PUBLIC_URL}/joker-steps`} dontShowOnSmallViewPort>
         <Header.Frame>
           <Header.Group>
-            <Header.Logo to={ROUTES.HOME} src={logo} alt="NetFilm" />
+            <Header.Logo to={ROUTES.HOME} src={`${process.env.PUBLIC_URL}/${logo}`} alt="NetFilm" />
             <Header.TextLink
               active={category === 'series' ? 'true' : 'false'}
               onClick={() => setCategory('series')}
@@ -72,10 +72,10 @@ export function BrowseContainer({ slides }) {
               setSearchTerm={setSearchTerm}
             />
             <Header.Profile>
-              <Header.Picture src={user.photoURL} />
+              <Header.Picture src={`${process.env.PUBLIC_URL}/${user.photoURL}`} />
               <Header.Dropdown>
                 <Header.Group>
-                  <Header.Picture src={user.photoURL} />
+                  <Header.Picture src={`${process.env.PUBLIC_URL}/${user.photoURL}`}  />
                   <Header.TextLink>{user.displayName}</Header.TextLink>
                 </Header.Group>
                 <Header.Group>
@@ -121,7 +121,7 @@ export function BrowseContainer({ slides }) {
           <Card.Feature category={category}>
             <Player>
               <Player.Button />
-              <Player.Video src="/videos/count_1080p.mp4" />
+              <Player.Video src={`${process.env.PUBLIC_URL}/videos/count_1080p.mp4`} />
             </Player>
           </Card.Feature>
           </Card>
