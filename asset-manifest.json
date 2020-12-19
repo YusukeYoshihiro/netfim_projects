@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/netfim_projects/static/js/main.37c1e5df.chunk.js",
-    "main.js.map": "/netfim_projects/static/js/main.37c1e5df.chunk.js.map",
+    "main.js": "/netfim_projects/static/js/main.56c378ac.chunk.js",
+    "main.js.map": "/netfim_projects/static/js/main.56c378ac.chunk.js.map",
     "runtime-main.js": "/netfim_projects/static/js/runtime-main.6aa0e572.js",
     "runtime-main.js.map": "/netfim_projects/static/js/runtime-main.6aa0e572.js.map",
     "static/css/2.b753890e.chunk.css": "/netfim_projects/static/css/2.b753890e.chunk.css",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.6aa0e572.js",
     "static/css/2.b753890e.chunk.css",
     "static/js/2.0cc11631.chunk.js",
-    "static/js/main.37c1e5df.chunk.js"
+    "static/js/main.56c378ac.chunk.js"
   ]
 }
