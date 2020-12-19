@@ -11,7 +11,7 @@ export default function Home() {
       <HeaderContainer>
         <Feature>
           <Feature.Title>
-            Unlimited films, TV programs and more
+           Welcome to Y'sFILM, <br/>Let's enjoy New Experience here. 
          </Feature.Title>
           <Feature.SubTitle>
             Watch anywhere. Cancel at any time.
