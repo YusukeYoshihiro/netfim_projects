@@ -31,7 +31,6 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://yusukeyoshihiro.github.io/netfim_projects/",
   "browserslist": {
     "production": [
       ">0.2%",
