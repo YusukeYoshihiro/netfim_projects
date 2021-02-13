@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "aos": "^2.3.4",
     "firebase": "^8.1.2",
     "fuse.js": "^6.4.3",
     "normalize.css": "^8.0.1",
