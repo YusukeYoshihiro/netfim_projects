@@ -10,7 +10,7 @@ export function HeaderContainer ({ children }) {
    return(
      <Header>
        <Header.Frame>
-         <Header.Logo to={ROUTES.HOME} alt="NetFilm" src={Logo} />
+         <Header.Logo to={ROUTES.HOME} alt="NetFilm" src={`${process.env.PUBLIC_URL}/${Logo}`} />
          <Header.ButtonLink to={ROUTES.SIGN_IN}>Sign In</Header.ButtonLink>
        </Header.Frame>
        {children}
