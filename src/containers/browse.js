@@ -101,7 +101,6 @@ export function BrowseContainer({ slides }) {
         {slideRows.map((slideItem) => (
           <Card   
             key={`${category}-${slideItem.title.toLowerCase()}`}  
-            data-aos="fade-up"
           >
             <Card.Title>{slideItem.title}</Card.Title>
             <Card.Entities>
