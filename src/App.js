@@ -9,7 +9,7 @@ export default function App() {
   const { user } = useAuthListener();
   console.log(user);
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <IsUserRedirect
           user={user}
