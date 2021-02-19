@@ -1,6 +1,5 @@
 import React from 'react';
 import { Header, Profiles } from '../components';
-// import { Logo } from '../components/header/styles/header';
 import * as ROUTES from '../constants/routes';
 import Logo from '../Y\'sFILM.png';
 

@@ -6,7 +6,6 @@ import { FooterContainer } from './footer';
 import { FirebaseContext } from '../context/firebase';
 import { Card, Loading, Header, Player } from '../components';
 import * as ROUTES from '../constants/routes';
-import logo from '../Y\'sFILM.png';
 import { Logo } from '../components/header/styles/header';
 
 
