@@ -46,15 +46,15 @@ export function BrowseContainer({ slides }) {
   return profile.displayName ? (
     <>
       {loading ? (
-        <Loading src={`${process.env.PUBLIC_URL}/${user.photoURL}`} />)
+        <Loading src={user.photoURL} />)
         : (
           <Loading.ReleaseBody />
         )}
 
-      <Header src={`${process.env.PUBLIC_URL}/joker-steps`} dontShowOnSmallViewPort>
+      <Header src="joker-steps" dontShowOnSmallViewPort>
         <Header.Frame>
           <Header.Group>
-            <Header.Logo to={ROUTES.HOME} src={`${process.env.PUBLIC_URL}/${Logo}`} alt="NetFilm" />
+            <Header.Logo to={ROUTES.HOME} src={Logo} alt="NetFilm" />
             <Header.TextLink
               active={category === 'series' ? 'true' : 'false'}
               onClick={() => setCategory('series')}
@@ -74,10 +74,10 @@ export function BrowseContainer({ slides }) {
               setSearchTerm={setSearchTerm}
             />
             <Header.Profile>
-              <Header.Picture src={`${process.env.PUBLIC_URL}/${user.photoURL}`} />
+              <Header.Picture src={user.photoURL} />
               <Header.Dropdown>
                 <Header.Group>
-                  <Header.Picture src={`${process.env.PUBLIC_URL}/${user.photoURL}`}  />
+                  <Header.Picture src={user.photoURL}  />
                   <Header.TextLink>{user.displayName}</Header.TextLink>
                 </Header.Group>
                 <Header.Group>
@@ -111,7 +111,7 @@ export function BrowseContainer({ slides }) {
                   key={item.docId} 
                   item={item}
                 >
-                  <Card.Image src={`${process.env.PUBLIC_URL}/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
+                  <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
                   <Card.Meta>
                     <Card.SubTitle>{item.title}</Card.SubTitle>
                     <Card.Text>{item.description}</Card.Text>
@@ -122,7 +122,7 @@ export function BrowseContainer({ slides }) {
           <Card.Feature category={category}>
             <Player>
               <Player.Button />
-              <Player.Video src={`${process.env.PUBLIC_URL}/videos/count_1080p.mp4`} />
+              <Player.Video src="/videos/count_1080p.mp4" />
             </Player>
           </Card.Feature>
           </Card>

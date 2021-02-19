@@ -10,7 +10,7 @@ export function SelectProfileContainer({ user, setProfile }) {
     <>
       <Header bg={false}>
         <Header.Frame>
-          <Header.Logo to={ROUTES.HOME} src={`${process.env.PUBLIC_URL}/${Logo}`} alt="NetFilm" />
+          <Header.Logo to={ROUTES.HOME} src={Logo} alt="NetFilm" />
         </Header.Frame>
       </Header>
 
@@ -25,7 +25,7 @@ export function SelectProfileContainer({ user, setProfile }) {
               })}
             data-testid="user-profile"
           >
-            <Profiles.Picture src={`${process.env.PUBLIC_URL}/${user.photoURL}`} />
+            <Profiles.Picture src={user.photoURL} />
             {/* <Profiles.Name src={user.displayName} /> */}
             <Profiles.Name>{user.displayName}</Profiles.Name>
           </Profiles.User>
