@@ -11,5 +11,5 @@ Built a movie app clone using React.js, Compound Components, Styled-Components
     -  Styled-Components
     -  Json Data
     -  Firebase Authentication
-    
-![Component 32 – 1](https://user-images.githubusercontent.com/58486430/111170801-926ef800-8561-11eb-830d-a8f51cc487ab.png)
+
+![movie_app](https://user-images.githubusercontent.com/58486430/111194288-48454100-8578-11eb-94c8-d8ee02b73a8e.png)
