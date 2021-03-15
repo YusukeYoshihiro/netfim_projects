@@ -68,7 +68,7 @@ export const Meta = styled.div`
   position: absolute;
   bottom: 0;
   padding: 10px;
-  background-color: #0000008f;
+  background-color: #e59909;
 `;
 
 export const Image = styled.img`
@@ -138,7 +138,7 @@ export const Feature = styled.div`
   height: 360px;
   background-position-x: right;
   background-repeat: no-repeat;
-  background-color: black;
+  background-color: #e59909;
 
   @media (max-width: 1000px) {
     height: auto;

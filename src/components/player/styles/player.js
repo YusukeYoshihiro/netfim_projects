@@ -62,8 +62,8 @@ export const Close = styled.button`
 `;
 
 export const Button = styled.button`
-  background-color: #e50914;
-  border-color: #ff0a16;
+  background-color: #e59909;
+  border-color: #e59909;
   width: 115px;
   height: 45px;
   text-transform: uppercase;
@@ -79,6 +79,6 @@ export const Button = styled.button`
 
   &:hover {
     transform: scale(1.05);
-    background-color: #ff0a16;
+    background-color: #09e524fa;
   }
 `;

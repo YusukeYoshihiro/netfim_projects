@@ -9,6 +9,7 @@ export const Background = styled.div`
 
     @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
+
   }
 `;
 
@@ -169,7 +170,7 @@ export const PlayButton = styled.button`
   transition: background-color 0.2s;
 
   &:hover {
-    background-color: #ff1e1e;
+    background-color: #e59909;
     color: #fff;
   }
 `
@@ -192,7 +193,7 @@ export const Profile = styled.div`
 
 export const ButtonLink = styled(ReactRouterLink)`
   display: flex;
-  background-color: #e50914;
+  background-color: #e59909;
   width: 84px;
   height: fit-content;
   color: white;
@@ -204,7 +205,7 @@ export const ButtonLink = styled(ReactRouterLink)`
   text-decoration: none;
 
   &:hover{
-    background-color: #f40612;
+    background-color:#e59909;
   }
 `;
 
