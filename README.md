@@ -11,4 +11,3 @@ Built a movie app clone using React.js, Compound Components, Styled-Components
     -  Styled-Components
     -  Json Data
     -  Firebase Authentication
-
