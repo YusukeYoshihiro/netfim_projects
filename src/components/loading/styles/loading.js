@@ -16,8 +16,7 @@ export const Spinner = styled.div`
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: black;
-  z-index: 999;
+  background-color: #011937;
 
   :after {
     content: '';
@@ -27,10 +26,10 @@ export const Spinner = styled.div`
     background-image: url(/images/misc/spinner.png);
     background-size: contain;
     background-repeat: no-repeat;
-    margin-top: -150px;
-    margin-left: -75px;
-    width: 150px;
-    height: 150px;
+    margin-top: -175px;
+    margin-left: -95px;
+    width: 200px;
+    height: 200px;
     animation-name: spin;
     animation-duration: 1000ms;
     animation-iteration-count: infinite;
@@ -78,6 +77,7 @@ export const Picture = styled.img`
   left: 50%;
   margin-top: -100px;
   margin-left: -22px;
+  z-index: 100;
 `;
 
 

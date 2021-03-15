@@ -4,7 +4,7 @@ export const GlobalStyles = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: border-box;
   }
-
+  /* #e59909 */
   html, body{
     height: 100%;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
