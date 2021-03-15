@@ -37,7 +37,7 @@ export function FooterContainer() {
         </Footer.Column>
       </Footer.Row>
       <Footer.Break />
-      <Footer.Text>Y'sFILM Yusuke Yoshihiro &copy;2020 All Rights Reserved</Footer.Text>
+      <Footer.Text>Y'sFILM Yusuke Yoshihiro &copy;2021 All Rights Reserved</Footer.Text>
     </Footer>
   )
 }
