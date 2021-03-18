@@ -6,7 +6,7 @@ import { FooterContainer } from './footer';
 import { FirebaseContext } from '../context/firebase';
 import { Card, Loading, Header, Player } from '../components';
 import * as ROUTES from '../constants/routes';
-import  logo  from '../Y\'sFILM.png';
+import logo from '../Y\'sFILM.png';
 
 
 export function BrowseContainer({ slides }) {
@@ -31,15 +31,16 @@ export function BrowseContainer({ slides }) {
   }, [slides, category])
 
   useEffect(() => {
-     const fuse = new Fuse(slideRows, { keys:['data.description', 'data.title', 'data.genre'],
-     });
-     const results = fuse.search(searchTerm).map(({ item }) => item);
+    const fuse = new Fuse(slideRows, {
+      keys: ['data.description', 'data.title', 'data.genre'],
+    });
+    const results = fuse.search(searchTerm).map(({ item }) => item);
 
-     if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
-       setSlideRows(results);
-     } else {
-       setSlideRows(slides[category]);
-     }
+    if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
+      setSlideRows(results);
+    } else {
+      setSlideRows(slides[category]);
+    }
   }, [searchTerm])
 
   return profile.displayName ? (
@@ -50,7 +51,7 @@ export function BrowseContainer({ slides }) {
           <Loading.ReleaseBody />
         )}
 
-      <Header src="joker-steps" dontShowOnSmallViewPort>
+      <Header src="mechanic" dontShowOnSmallViewPort>
         <Header.Frame>
           <Header.Group>
             <Header.Logo to={ROUTES.HOME} src={logo} alt="NetFilm" />
@@ -76,7 +77,7 @@ export function BrowseContainer({ slides }) {
               <Header.Picture src={user.photoURL} />
               <Header.Dropdown>
                 <Header.Group>
-                  <Header.Picture src={user.photoURL}  />
+                  <Header.Picture src={user.photoURL} />
                   <Header.TextLink>{user.displayName}</Header.TextLink>
                 </Header.Group>
                 <Header.Group>
@@ -88,26 +89,24 @@ export function BrowseContainer({ slides }) {
         </Header.Frame>
 
         <Header.Feature>
-          <Header.FeatureCallOut>Watch Joker Now!!</Header.FeatureCallOut>
+          <Header.FeatureCallOut>Watch Mechanic Now!!</Header.FeatureCallOut>
           <Header.Text>
-            Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham
-            City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a
-            futile attempt to feel like he's part of the world around him.
-       </Header.Text>
+            Bishop's most formidable foe kidnaps the love of his life in order to make him complete three impossible assassinations and make them look like accidents.
+            </Header.Text>
           <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
       </Header>
 
       <Card.Group>
         {slideRows.map((slideItem) => (
-          <Card   
-            key={`${category}-${slideItem.title.toLowerCase()}`}  
+          <Card
+            key={`${category}-${slideItem.title.toLowerCase()}`}
           >
             <Card.Title>{slideItem.title}</Card.Title>
             <Card.Entities>
               {slideItem.data.map((item) => (
-                <Card.Item 
-                  key={item.docId} 
+                <Card.Item
+                  key={item.docId}
                   item={item}
                 >
                   <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
@@ -118,18 +117,18 @@ export function BrowseContainer({ slides }) {
                 </Card.Item>
               ))}
             </Card.Entities>
-          <Card.Feature category={category}>
-            <Player>
-              <Player.Button />
-              <Player.Video src="/videos/count_1080p.mp4" />
-            </Player>
-          </Card.Feature>
+            <Card.Feature category={category}>
+              <Player>
+                <Player.Button />
+                <Player.Video src="/videos/count_1080p.mp4" />
+              </Player>
+            </Card.Feature>
           </Card>
         ))}
       </Card.Group>
       <FooterContainer />
     </>
   ) : (
-      <SelectProfileContainer user={user} setProfile={setProfile} />
-    );
+    <SelectProfileContainer user={user} setProfile={setProfile} />
+  );
 };
