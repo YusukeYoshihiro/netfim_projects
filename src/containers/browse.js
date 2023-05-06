@@ -20,7 +20,6 @@ export function BrowseContainer({ slides }) {
   const user = firebase.auth().currentUser || {};
 
   useEffect(() => {
-    console.log('profile', profile)
     setTimeout(() => {
       setLoading(false);
     }, 3000);
@@ -98,9 +97,9 @@ export function BrowseContainer({ slides }) {
       </Header>
 
       <Card.Group>
-        {slideRows.map((slideItem) => (
+        {slideRows.map((slideItem, index) => (
           <Card
-            key={`${category}-${slideItem.title.toLowerCase()}`}
+            key={index}
           >
             <Card.Title>{slideItem.title}</Card.Title>
             <Card.Entities>

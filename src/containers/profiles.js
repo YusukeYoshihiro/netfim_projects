@@ -4,7 +4,6 @@ import * as ROUTES from '../constants/routes';
 import Logo from '../Y\'sFILM.png';
 
 export function SelectProfileContainer({ user, setProfile }) {
-  console.log('user', user);
   return (
     <>
       <Header bg={false}>
