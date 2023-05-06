@@ -32,7 +32,6 @@ export function ProtectedRoute({ user, children, ...rest }) {
       {...rest}
       render={({location}) => {
         if(user){
-          console.log('user', user);
           return children;
         }
 

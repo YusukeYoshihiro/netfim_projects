@@ -6,12 +6,11 @@ import selectionFilter from '../utils/selection-filter';
 
 export default function Browse() {
    // we need the series and the films
-   const { series } = useContent('series'); //  console.log(series)
-   const { films }  = useContent( 'films'); //  console.log(films)      
+   const { series } = useContent('series');
+   const { films }  = useContent( 'films');
    // we need slides
    const slides = selectionFilter({ series, films })
    // pass it to the browse container
-  
 
   return <BrowseContainer slides={ slides } /> ;
   
