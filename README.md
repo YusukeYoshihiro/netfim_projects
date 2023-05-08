@@ -1,5 +1,5 @@
 # Movie app project
-- [Website](https://netfim-projects-yusukeyoshihiro.vercel.app/)
+- [Demo](https://netfim-projects-yusukeyoshihiro.vercel.app/)
 ## Overview
 ##### Descroption
 Built a movie app clone using React.js, Compound Components, Styled-Components
